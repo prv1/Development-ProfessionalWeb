@@ -1,6 +1,78 @@
 webpackJsonp([1,4],{
 
-/***/ 342:
+/***/ 328:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StockService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var StockService = (function () {
+    function StockService() {
+    }
+    StockService.prototype.getStocks = function () {
+        return ['AAPL', 'IBM', 'GOOG', 'UDEMY', 'UBER'];
+    };
+    StockService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(), 
+        __metadata('design:paramtypes', [])
+    ], StockService);
+    return StockService;
+}());
+//# sourceMappingURL=/Users/phillipviau/Documents/Github/ProfessionalWebsite/src/stock.service.js.map
+
+/***/ }),
+
+/***/ 329:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stock_service__ = __webpack_require__(328);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StocksComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var StocksComponent = (function () {
+    function StocksComponent(stockService) {
+        this.title = "List of Stocks";
+        this.stocks = stockService.getStocks();
+    }
+    StocksComponent.prototype.ngOnInit = function () {
+    };
+    StocksComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
+            selector: 'app-stocks',
+            template: __webpack_require__(668),
+            styles: [__webpack_require__(665)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__stock_service__["a" /* StockService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__stock_service__["a" /* StockService */]) === 'function' && _a) || Object])
+    ], StocksComponent);
+    return StocksComponent;
+    var _a;
+}());
+//# sourceMappingURL=/Users/phillipviau/Documents/Github/ProfessionalWebsite/src/stocks.component.js.map
+
+/***/ }),
+
+/***/ 384:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +81,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 342;
+webpackEmptyContext.id = 384;
 
 
 /***/ }),
 
-/***/ 343:
+/***/ 385:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(431);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(473);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(455);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(452);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(509);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(505);
 
 
 
@@ -35,7 +107,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 451:
+/***/ 504:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -54,12 +126,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Hello Angular2!';
+        this.today = new Date();
     }
     AppComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'app-root',
-            template: __webpack_require__(612),
-            styles: [__webpack_require__(609)]
+            template: __webpack_require__(666),
+            styles: [__webpack_require__(663)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -69,17 +142,20 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 452:
+/***/ 505:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(421);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(427);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(451);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mutualfunds_mutualfunds_component__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stocks_stocks_component__ = __webpack_require__(454);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(469);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(504);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mutualfunds_mutualfunds_component__ = __webpack_require__(508);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stocks_stocks_component__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__stock_service__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__date_formatter_pipe__ = __webpack_require__(507);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing__ = __webpack_require__(506);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -97,6 +173,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -105,14 +184,16 @@ var AppModule = (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_5__mutualfunds_mutualfunds_component__["a" /* MutualfundsComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__stocks_stocks_component__["a" /* StocksComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__stocks_stocks_component__["a" /* StocksComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__date_formatter_pipe__["a" /* DateFormatterPipe */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */]
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_9__app_routing__["a" /* routing */]
             ],
-            providers: [],
+            providers: [__WEBPACK_IMPORTED_MODULE_7__stock_service__["a" /* StockService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         }), 
         __metadata('design:paramtypes', [])
@@ -123,7 +204,59 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 453:
+/***/ 506:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stocks_stocks_component__ = __webpack_require__(329);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routing; });
+
+
+var appRoutes = [{
+        path: 'stocks',
+        component: __WEBPACK_IMPORTED_MODULE_1__stocks_stocks_component__["a" /* StocksComponent */]
+    }];
+var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
+//# sourceMappingURL=/Users/phillipviau/Documents/Github/ProfessionalWebsite/src/app.routing.js.map
+
+/***/ }),
+
+/***/ 507:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DateFormatterPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DateFormatterPipe = (function () {
+    function DateFormatterPipe() {
+    }
+    DateFormatterPipe.prototype.transform = function (value, args) {
+        return null;
+    };
+    DateFormatterPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Pipe */])({
+            name: 'dateFormatter'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], DateFormatterPipe);
+    return DateFormatterPipe;
+}());
+//# sourceMappingURL=/Users/phillipviau/Documents/Github/ProfessionalWebsite/src/date-formatter.pipe.js.map
+
+/***/ }),
+
+/***/ 508:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -145,10 +278,10 @@ var MutualfundsComponent = (function () {
     MutualfundsComponent.prototype.ngOnInit = function () {
     };
     MutualfundsComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'app-mutualfunds',
-            template: __webpack_require__(613),
-            styles: [__webpack_require__(610)]
+            template: __webpack_require__(667),
+            styles: [__webpack_require__(664)]
         }), 
         __metadata('design:paramtypes', [])
     ], MutualfundsComponent);
@@ -158,44 +291,7 @@ var MutualfundsComponent = (function () {
 
 /***/ }),
 
-/***/ 454:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StocksComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var StocksComponent = (function () {
-    function StocksComponent() {
-        this.title = "List of Stocks";
-        this.stocks = ['AAPL', 'IBM', 'GOOG'];
-    }
-    StocksComponent.prototype.ngOnInit = function () {
-    };
-    StocksComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
-            selector: 'app-stocks',
-            template: __webpack_require__(614),
-            styles: [__webpack_require__(611)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], StocksComponent);
-    return StocksComponent;
-}());
-//# sourceMappingURL=/Users/phillipviau/Documents/Github/ProfessionalWebsite/src/stocks.component.js.map
-
-/***/ }),
-
-/***/ 455:
+/***/ 509:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -211,55 +307,55 @@ var environment = {
 
 /***/ }),
 
-/***/ 609:
+/***/ 663:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 610:
+/***/ 664:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 611:
+/***/ 665:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 612:
+/***/ 666:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>\n  {{title}}\n</h1>\n\n<app-stocks></app-stocks>\n\n<p>This has no highlight</p>\n\n<router-outlet></router-outlet>"
+module.exports = "{{today | date: \"DMMMM dd, yyyy hh:mm a\"}}\n<h1>\n  {{title}}\n</h1>\n\n\n<p>This has no highlight</p>\n\n<router-outlet></router-outlet>"
 
 /***/ }),
 
-/***/ 613:
+/***/ 667:
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  mutualfunds works!\n</p>\n"
 
 /***/ }),
 
-/***/ 614:
+/***/ 668:
 /***/ (function(module, exports) {
 
 module.exports = "<h2>{{title}}</h2>\n\n<ul>\n  <li *ngFor=\"let stock of stocks\">\n    {{stock}}\n  </li>\n</ul>\n"
 
 /***/ }),
 
-/***/ 627:
+/***/ 686:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(343);
+module.exports = __webpack_require__(385);
 
 
 /***/ })
 
-},[627]);
+},[686]);
 //# sourceMappingURL=main.bundle.map
