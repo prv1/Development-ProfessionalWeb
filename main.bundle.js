@@ -331,7 +331,7 @@ module.exports = ""
 /***/ 666:
 /***/ (function(module, exports) {
 
-module.exports = "{{today | date: \"DMMMM dd, yyyy hh:mm a\"}}\n<h1>\n  {{title}}\n</h1>\n\n\n<p>This has no highlight</p>\n\n<router-outlet></router-outlet>"
+module.exports = "{{today | date: \"DMMMM dd, yyyy hh:mm a\"}}\n<h1>\n  {{title}}\n</h1>\n\n\n<p>This has no highlight</p>\n\n<a routerLink=\"/\">Home</a>\n<a routerLink=\"/stocks\">Stocks</a>\n\n<router-outlet></router-outlet>"
 
 /***/ }),
 
