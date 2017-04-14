@@ -235,7 +235,7 @@ module.exports = ""
 /***/ 612:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>\n  {{title}}\n</h1>\n\n<app-stocks></app-stocks>\n\n<p>This has no highlight</p>\nnpm "
+module.exports = "<h1>\n  {{title}}\n</h1>\n\n<app-stocks></app-stocks>\n\n<p>This has no highlight</p>\n\n<router-outlet></router-outlet>"
 
 /***/ }),
 
