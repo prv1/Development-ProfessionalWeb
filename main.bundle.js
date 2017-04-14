@@ -20,7 +20,7 @@ var StockService = (function () {
     function StockService() {
     }
     StockService.prototype.getStocks = function () {
-        return ['AAPL', 'IBM', 'GOOG', 'UDEMY', 'UBER'];
+        return ['AAPL', 'IBM', 'GOOG', 'UDEMY', 'UBER', 'YHOO'];
     };
     StockService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(), 
